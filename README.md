@@ -35,7 +35,10 @@ control_points = np.array([
     [1.5, 0]
 ])
 
+# 创建机器人实例，设置大腿长度和小腿长度
+robot = Robot(hip_length=0.44, knee_length=0.38)
 
+# 求解髋关节轨迹解析表达式
 hip_height, t_optimal = robot.hip_trajectory(control_points)
 print("Optimal t:", t_optimal)
 print("Hip Height:", hip_height)
